@@ -79,39 +79,39 @@ $(function() {
     
     //===== Counter Up
     
-    $('.counter').counterUp({
-        delay: 10,
-        time: 3000
-    });
+    // $('.counter').counterUp({
+    //     delay: 10,
+    //     time: 3000
+    // });
     
     
     //===== Isotope Project 1
     
-    $('.container').imagesLoaded(function () {
-        var $grid = $('.grid').isotope({
-        // options
-            transitionDuration: '1s',
-            itemSelector: '.grid-item',
-            percentPosition: true,
-            masonry: {
+    // $('.container').imagesLoaded(function () {
+    //     var $grid = $('.grid').isotope({
+    //     // options
+    //         transitionDuration: '1s',
+    //         itemSelector: '.grid-item',
+    //         percentPosition: true,
+    //         masonry: {
                 
-            }
+    //         }
             
-        });
+    //     });
         
-        // filter items on button click
-        $('.project-menu ul').on( 'click', 'li', function() {
-          var filterValue = $(this).attr('data-filter');
-          $grid.isotope({ filter: filterValue });
-        });
+    //     // filter items on button click
+    //     $('.project-menu ul').on( 'click', 'li', function() {
+    //       var filterValue = $(this).attr('data-filter');
+    //       $grid.isotope({ filter: filterValue });
+    //     });
         
-        //for menu active class
-        $('.project-menu ul li').on('click', function (event) {
-            $(this).siblings('.active').removeClass('active');
-            $(this).addClass('active');
-            event.preventDefault();
-        });
-    });
+    //     //for menu active class
+    //     $('.project-menu ul li').on('click', function (event) {
+    //         $(this).siblings('.active').removeClass('active');
+    //         $(this).addClass('active');
+    //         event.preventDefault();
+    //     });
+    // });
     
     
     //===== Back to top
@@ -217,17 +217,17 @@ $(function() {
     
     //===== slick Testimonial
     
-    $('.testimonial-active').slick({
-        dots: false,
-        arrows: true,
-        prevArrow: '<span class="prev"><i class="lni-arrow-left"></i></span>',
-        nextArrow: '<span class="next"><i class="lni-arrow-right"></i></span>',
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        speed: 800,
-        slidesToShow: 1,
-    });
+    // $('.testimonial-active').slick({
+    //     dots: false,
+    //     arrows: true,
+    //     prevArrow: '<span class="prev"><i class="lni-arrow-left"></i></span>',
+    //     nextArrow: '<span class="next"><i class="lni-arrow-right"></i></span>',
+    //     infinite: true,
+    //     autoplay: true,
+    //     autoplaySpeed: 5000,
+    //     speed: 800,
+    //     slidesToShow: 1,
+    // });
     
     
     //===== Magnific Popup
@@ -238,14 +238,19 @@ $(function() {
         enabled:true
       }
     });
-    
-    
-    
-    
-    //=====  WOW active
-    
+     
+    $(function() {
+        $('.clickable-row').hover( function(){
+           $(this).css('background-color', 'rgba(153, 128, 141, 0.3)');
+        },
+        function(){
+           $(this).css('background-color', '#FEFEFE');
+        });
+     });
+
+    $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+    });
+
     new WOW().init();
-    
-    
-    
 });

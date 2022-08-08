@@ -28,8 +28,6 @@ Route::get('/home', function () {
 
     $persons = DB::table('persons')->where('user_id', '=', auth()->user()->id)->get();
 
-    // dd($persons);
-
     // $prsonContacts = DB::table('person_contacts')->where('person_id', '=', $persons->id)->get();
     // $prsonAddresses = DB::table('person_addresses')->where('person_id', '=', $persons->id)->get();
 
@@ -49,15 +47,17 @@ Route::get('/home', function () {
 
     return view('home', [
         'persons' => $persons,
-        // 'counter' => $counter
+        'counter' => 1
     ]);
 
 });
 
 // --- persons routes ---
-Route::get('/persons', [App\Http\Controllers\PersonsController::class, 'create'])->name('persons');
-Route::get('/persons', [App\Http\Controllers\PersonsController::class, 'create']);
-Route::post('/persons/getData', [PersonsController::class, 'getData']);
+Route::get('/persons', [App\Http\Controllers\PersonsController::class, 'index']);
+Route::get('/persons/create', [App\Http\Controllers\PersonsController::class, 'create'])->name('persons');
+Route::post('/persons', [App\Http\Controllers\PersonsController::class, 'store']);
+Route::get('/persons/{person}/edit', [App\Http\Controllers\PersonsController::class, 'edit']);
+Route::delete('/persons/{person}/delete', [App\Http\Controllers\PersonsController::class, 'destroy']) ;
 
 // --- person contact routes ---
 Route::get('/personContacts', [App\Http\Controllers\PersonContactsController::class, 'create'])->name('personContacts');

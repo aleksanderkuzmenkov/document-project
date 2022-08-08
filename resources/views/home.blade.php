@@ -27,7 +27,9 @@
                         <span class="text1">3 <span class="text2">von 3 Formularen ausgefüllt</span></span>
                       </div>
                   </div>
-                  <button type="button" class="btn btn-primary btn-lg btn-block">Personen Verwalten</button>
+                  <div class="d-grid gap-2 col-12 mx-auto">
+                    <a class="btn btn-primary" href="persons">Personen Verwalten</a>
+                  </div>
                 @endif
               </div>
           </div>

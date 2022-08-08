@@ -122,5 +122,52 @@
         </div>
     </div>
     <script src="https://kit.fontawesome.com/c665bba4d4.js" crossorigin="anonymous"></script>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->  
+     <!--====== Jquery js ======-->
+     <script src="{{ URL::asset('js/vendor/jquery-1.12.4.min.js'); }}"></script>
+     <script src="{{ URL::asset('js/vendor/modernizr-3.7.1.min.js'); }}"></script>
+     
+     
+     <!--====== Bootstrap js ======-->
+     <script src="{{ URL::asset('js/popper.min.js'); }}"></script>
+     <script src="{{ URL::asset('js/bootstrap.min.js'); }}"></script>
+     
+     <!--====== Slick js ======-->
+     <script src="{{ URL::asset('js/slick.min.js'); }}"></script>
+     
+     <!--====== Isotope js ======-->
+     <script src="{{ URL::asset('js/imagesloaded.pkgd.min.js'); }}"></script>
+     <script src="{{ URL::asset('js/isotope.pkgd.min.js'); }}"></script>
+     
+     <!--====== Counter Up js ======-->
+     <script src="{{ URL::asset('js/waypoints.min.js'); }}"></script>
+     <script src="{{ URL::asset('js/jquery.counterup.min.js'); }}"></script>
+     
+     <!--====== Circles js ======-->
+     <script src="{{ URL::asset('js/circles.min.js'); }}"></script>
+     
+     <!--====== Appear js ======-->
+     <script src="{{ URL::asset('js/jquery.appear.min.js'); }}"></script>
+     
+     <!--====== WOW js ======-->
+     <script src="{{ URL::asset('js/wow.min.js'); }}"></script>
+     
+     <!--====== Headroom js ======-->
+     <script src="{{ URL::asset('js/headroom.min.js'); }}"></script>
+     
+     <!--====== Jquery Nav js ======-->
+     <script src="{{ URL::asset('js/jquery.nav.js'); }}"></script>
+     
+     <!--====== Scroll It js ======-->
+     <script src="{{ URL::asset('js/scrollIt.min.js'); }}"></script>
+     
+     <!--====== Magnific Popup js ======-->
+     <script src="{{ URL::asset('js/jquery.magnific-popup.min.js'); }}"></script>
+     
+     <!--====== Main js ======-->
+     <script src="{{ URL::asset('js/main.js'); }}"></script>
+
+
 </body>
 </html>

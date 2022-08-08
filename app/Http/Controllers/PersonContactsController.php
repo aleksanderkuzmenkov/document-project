@@ -12,7 +12,6 @@ class PersonContactsController extends Controller
     }
 
     public function create(){
-       
         return view('personContacts.create');
     }
 

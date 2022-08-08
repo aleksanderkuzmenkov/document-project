@@ -7,14 +7,61 @@ use App\Models\Persons;
 
 class PersonsController extends Controller
 {
+    /**
+     * index
+     *
+     * @author Oleksandr Kuzmenkov
+     * @return View
+     */ 
     public function index(){
-        return view('persons.index');
+
+        $persons = Persons::latest()->paginate(5);
+
+        return view('persons.index',compact('persons'))
+            ->with(request()->input('page'));
     }
 
+    /**
+     * create
+     *
+     * @author Oleksandr Kuzmenkov
+     * @return View
+     */ 
     public function create(){
         return view('persons.create');
     }
 
+    /**
+     * edit
+     * @param integer
+     * @author Oleksandr Kuzmenkov
+     * @return View
+     */ 
+    public function edit( $id ){
+
+        $person = Persons::find($id);
+
+        return view('persons.edit', ['person' => $person]);
+    }
+
+    /**
+     * edit
+     * @param integer
+     * @author Oleksandr Kuzmenkov
+     * @return View
+     */ 
+    public function show( Persons $prson ){
+        
+        
+        return view('persons.edit');
+    }
+
+    /**
+     * edit
+     * @param array
+     * @author Oleksandr Kuzmenkov
+     * @return View
+     */ 
     public function store( Request $request ){
        
         $person = new Persons();
@@ -32,10 +79,10 @@ class PersonsController extends Controller
         ->with("person_id", $person->id);
     }
 
-    public function getData(){
+    public function destroy( Persons $person ){
 
-        $person = Persons::where('user_id', auth()->user()->id);
+        $person->delete();
 
-        dd( $person );
+        return redirect('persons');
     }
 }
