@@ -108,10 +108,10 @@
                             </div> <!-- navbar collapse -->
                             
                             <div class="navbar-btn d-none d-sm-inline-block mr-1">
-                                <a class="main-btn" data-scroll-nav="0" href="#">Anmelden</a>
+                                <a class="main-btn" href="{{ url('login') }}">Anmelden</a>
                             </div>
                             <div class="navbar-btn d-none d-sm-inline-block">
-                                <a class="main-btn" data-scroll-nav="0" href="#">Konto erstellen</a>
+                                <a class="main-btn" href="{{ url('register') }}">Konto erstellen</a>
                             </div>
                         </nav> <!-- navbar -->
                     </div>
@@ -1023,6 +1023,7 @@
      
      <!--====== Main js ======-->
      <script src="{{ URL::asset('js/main.js'); }}"></script>
+
 </body>
 
 </html>
