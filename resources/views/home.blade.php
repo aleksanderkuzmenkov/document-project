@@ -16,7 +16,10 @@
               </div>
               <div class="mt-5">
                 @if(count( $persons ) > 0 )
-                  <h3 class="heading">Sie haben bereits {{ count( $persons ) }} Personen angelegt.</h3>
+                <h3 class="heading">Sie haben bereits {{ count( $persons ) }} Personen angelegt.</h3>
+                @else
+                <h3 class="heading">Sie haben noch keine Personen angelegt.</h3>
+                @endif
                   <div class="mt-5">
                     <p>Sie bitte die Schaltfläsche "Personen bearbeiten" um weitere Personen anzulegen, oder breits angelegte zu bearbeten.</p>
                       <div class="progress">
@@ -30,7 +33,7 @@
                   <div class="d-grid gap-2 col-12 mx-auto">
                     <a class="btn btn-primary" href="persons">Personen Verwalten</a>
                   </div>
-                @endif
+                
               </div>
           </div>
       </div>
@@ -46,13 +49,21 @@
                   <div class="badge"> <span>Product</span> </div>
               </div>
               <div class="mt-5">
-                  <h3 class="heading">Junior Product<br>Designer-Singapore</h3>
+                <h3 class="heading">Lassen Sie ein Dokument generieren.</h3>
                   <div class="mt-5">
+                    <p>Ganz einfach und schnell! Einfach die Schaltfläsche anckliken und dokument generieren</p>
                       <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                          <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
-                      <div class="mt-3"> <span class="text1">42 Applied <span class="text2">of 70 capacity</span></span> </div>
+                      <div class="mt-3">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span class="text1">3 <span class="text2">von 3 Formularen ausgefüllt</span></span>
+                      </div>
                   </div>
+                  <div class="d-grid gap-2 col-12 mx-auto">
+                    <a class="btn btn-primary" href="persons">Dokumente generieren</a>
+                  </div>
+                
               </div>
           </div>
       </div>

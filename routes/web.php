@@ -25,7 +25,6 @@ Auth::routes();
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/home', function () {
-
     $persons = DB::table('persons')->where('user_id', '=', auth()->user()->id)->get();
 
     // $prsonContacts = DB::table('person_contacts')->where('person_id', '=', $persons->id)->get();

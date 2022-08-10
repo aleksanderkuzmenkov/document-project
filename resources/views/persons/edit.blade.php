@@ -38,6 +38,28 @@
                         <input type="date" name="employed_since" placeholder="Employed since" value="{{$person->employed_since}}">
                     </div> <!-- contact-form -->
                 </div>
+                
+                {{-- <!-- PERSON CONTACT SECTION -->
+                <div class="col-md-12">
+                    <div class="contact-form mt-45">
+                        <label>Enter Your phone number</label>
+                        <input type="tel" name="phone_number" placeholder="Phone Number">
+                    </div> <!-- contact-form -->
+                </div>
+                <div class="col-md-12">
+                    <div class="contact-form mt-45">
+                        <label>Enter Your mobile number</label>
+                        <input type="tel" name="mobile_number" placeholder="Mobile nmber">
+                    </div> <!-- contact-form -->
+                </div>
+                <div class="col-md-12">
+                    <div class="contact-form mt-45">
+                        <label>Your date E-Mail address</label>
+                        <input type="email" name="email_address" placeholder="E-Mail address">
+                    </div> <!-- contact-form -->
+                </div> --}}
+
+                <!-- SEND BUTTON -->
                 <p class="form-message"></p>
                 <div class="col-md-12">
                     <div class="contact-form mt-45">
