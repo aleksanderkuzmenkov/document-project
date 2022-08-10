@@ -2223,4 +2223,8 @@ p {
   border-left: 1px solid black;
   border-right: 1px solid black;
 }
+
+.document-preview{
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
 /*# sourceMappingURL=style.css.map */

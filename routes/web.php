@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PersonsController;
 use App\Http\Controllers\PersonContactsController;
 use App\Http\Controllers\PersonAddressesController;
+use App\Models\Persons;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,3 +66,11 @@ Route::post('/personContacts', [PersonContactsController::class, 'store']);
 // --- preson addresses routes ---
 Route::get('/personAddresses', [App\Http\Controllers\PersonAddressesController::class, 'create'])->name('personAddresses');
 Route::post('/personAddresses', [PersonAddressesController::class, 'store']);
+
+Route::get('/property-mail', function () {
+
+    $persons = Persons::latest()->paginate(5);
+
+    $pdf = PDF::loadView('propertyMail.propertymail', compact('persons'));
+    return $pdf->download('property-mail.pdf');
+});
