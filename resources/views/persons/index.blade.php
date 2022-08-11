@@ -28,9 +28,7 @@
         </ul>
     </div>
 </div> --}}
-{{--========================= EXPEREMENTAL CARDS END =========================--}}
-
-
+{{--========================= EXPEREMENTAL CARDS END =========================--}} 
 <div class="container mt-5 mb-3 pt-100">
     <div class="row">
         <div class="text-right pb-30">
