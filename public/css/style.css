@@ -2254,11 +2254,11 @@ p {
   text-align: center;
 }
 
-.container:hover .image {
+.document:hover .image {
   opacity: 0.3;
 }
 
-.container:hover .middle {
+.document:hover .middle {
   opacity: 1;
 }
 
