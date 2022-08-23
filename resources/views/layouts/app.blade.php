@@ -49,7 +49,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
+                            <a class="navbar-brand" href="/">
                                 {{-- <img src="/../resources/images/logo.png" alt="Logo"> --}}
                                 <h3 class="text-danger">GENERATE-ME</h3>
                             </a>
@@ -61,8 +61,8 @@
 
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav m-auto">
-                                    <li class="nav-item active">
-                                        <a href="#home">Home</a>
+                                    <li class="nav-item">
+                                        <a href="/home">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#about">About </a>
@@ -98,7 +98,8 @@
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }}
                                     </a>
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="persons"> {{ __('Persons') }}</a>
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
@@ -115,7 +116,7 @@
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- navbar area -->
-        <div class="pt-100">
+        <div class="pt-50">
             <main class="py-4">
                 @yield('content')
             </main>

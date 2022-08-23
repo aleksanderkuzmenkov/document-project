@@ -5,7 +5,7 @@
 <div class="d-flex justify-content-center">
     <div class="contact-wrapper-form pt-115 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.5s">
         <h4 class="contact-title pb-10"><i class="lni-envelope"></i> {{__('Step 1/3')}} {{__('Please get your personal information')}}</h4>
-        <form id="contact-form" action="{{ route('persons')}}" method="post">
+        <form id="contact-form" action="/persons" method="post">
             @csrf
             <div class="row">
                 <div class="col-md-6">

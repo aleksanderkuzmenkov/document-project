@@ -16,7 +16,6 @@ class PersonContactsController extends Controller
     }
 
     public function store( Request $request ){
-       
         $personContact = new PersonContacts();
 
         $personContact->person_id = $request->person_id;

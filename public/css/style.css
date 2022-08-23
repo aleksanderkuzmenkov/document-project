@@ -2196,4 +2196,75 @@ p {
     .blog-ratting .ratting-list ul li a span {
       float: right; }
 
-/*# sourceMappingURL=style.css.map */
+.line{
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid black;
+  position: absolute;
+  }
+
+.next-line{
+  width: 30%;
+  height: 1px;
+  border-bottom: 1px solid black;
+  position: absolute;
+  }
+
+.vl {
+  border-left: 1px solid black;
+  height: 47px;
+  width: 1px;
+}
+
+.test{
+  width: 30%;
+  height: 47px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+/* .document-preview.image{
+  position:relative;
+}
+
+.document-preview:hover{
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+} */
+
+
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.document:hover .image {
+  opacity: 0.3;
+}
+
+.document:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
